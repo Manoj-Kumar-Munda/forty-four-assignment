@@ -2,12 +2,10 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import {
-  BrowserRouter,
   createBrowserRouter,
   createRoutesFromElements,
   Route,
   RouterProvider,
-  Routes,
 } from "react-router";
 import DashboardPage from "./pages/dashboard";
 import UserDetailsPage from "./pages/user-details";
