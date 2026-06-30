@@ -1,5 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
+import { Provider } from "react-redux";
 import "./index.css";
 import {
   createBrowserRouter,
@@ -7,6 +8,7 @@ import {
   Route,
   RouterProvider,
 } from "react-router";
+import store from "./store/store";
 import DashboardPage from "./pages/dashboard";
 import UserDetailsPage from "./pages/user-details";
 
@@ -22,6 +24,8 @@ const router = createBrowserRouter(
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   </StrictMode>,
 );
