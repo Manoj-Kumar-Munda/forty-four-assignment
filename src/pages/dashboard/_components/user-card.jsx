@@ -13,7 +13,7 @@ const UserCard = ({ user }) => {
             className="group border bg-white border-neutral-200 rounded-xl p-5 text-inherit cursor-pointer transition-all duration-200 hover:border-neutral-300 hover:shadow-md hover:-translate-y-0.5"
         >
             <div className="flex items-center gap-3.5 mb-4">
-                <div className="size-10 rounded-full flex items-center justify-center text-sm font-semibold text-white bg-neutral-800">
+                <div className="size-10 rounded-full flex items-center justify-center text-sm font-semibold text-neutral-800 bg-slate-300">
                     {initials}
                 </div>
                 <div>
