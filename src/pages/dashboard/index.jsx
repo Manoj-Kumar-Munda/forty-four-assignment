@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import useFetch from "../../hooks/useFetch";
-import { setUsers, addUser } from "../../store/slice/users";
+import { setUsers } from "../../store/slice/users";
 import { USERS_API_URL } from "../../constants/endpoints";
 import UserCard from "./_components/user-card";
 import { cn } from "../../lib/utils";
@@ -21,13 +21,13 @@ const DashboardPage = () => {
   }, [data, dispatch]);
 
   return (
-    <div className="min-h-screen py-8 px-6 mx-auto max-w-7xl bg-white text-neutral-900">
+    <div className="min-h-svh py-8 px-6 mx-auto max-w-7xl bg-slate-50 text-neutral-900">
       <header className="mb-10">
         <h1 className="text-3xl font-bold tracking-tight text-neutral-900">Dashboard</h1>
         <p className="mt-1.5 text-sm text-neutral-500">Welcome to your dashboard</p>
       </header>
 
-      {loading && <p className="text-sm text-neutral-400">Loading...</p>}
+      {loading && !users && <p className="text-sm text-neutral-400">Loading...</p>}
 
       {error && (
         <div className="flex flex-col items-center justify-center text-center gap-3">
