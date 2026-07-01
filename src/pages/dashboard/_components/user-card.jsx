@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import { Mail, Phone, Building2 } from "lucide-react";
 
 function getInitials(name) {
     const parts = name.trim().split(" ");
@@ -23,9 +24,18 @@ const UserCard = ({ user }) => {
             </div>
 
             <div className="flex flex-col gap-2">
-                <span className="text-sm text-gray-500">{user.email.toLowerCase()}</span>
-                <span className="text-sm text-gray-500">{user.phone.split(" ")[0]}</span>
-                <span className="text-sm text-gray-500">{user.company.name}</span>
+                <span className="flex items-center gap-2 text-sm text-gray-500">
+                    <Mail size={12} className="shrink-0 text-gray-400" />
+                    {user.email.toLowerCase()}
+                </span>
+                <span className="flex items-center gap-2 text-sm text-gray-500">
+                    <Phone size={12} className="shrink-0 text-gray-400" />
+                    {user.phone.split(" ")[0]}
+                </span>
+                <span className="flex items-center gap-2 text-sm text-gray-500">
+                    <Building2 size={12} className="shrink-0 text-gray-400" />
+                    {user.company.name}
+                </span>
             </div>
         </Link>
     );
