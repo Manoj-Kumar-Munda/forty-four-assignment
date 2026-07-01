@@ -51,22 +51,22 @@ const DashboardPage = () => {
         {users && (
           <>
             <div className="space-y-4">
-              <div className="flex items-center justify-between gap-4">
-                <Input
-                  className={"placeholder:text-sm py-1 w-64"}
-                  placeholder="Search users..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  icon={<Search size={14} />}
-                />
-
-
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-end gap-3">
                 <Button
-                  className="bg-neutral-800 hover:bg-neutral-700"
+                  className="bg-neutral-800 order-1 sm:order-2 self-end sm:self-auto shrink-0 hover:bg-neutral-700"
                   onClick={() => setShowAddUserForm(true)}
                 >
                   Add user
                 </Button>
+                <div className="order-2 sm:order-1">
+                  <Input
+                    className={"placeholder:text-sm w-full sm:w-64"}
+                    placeholder="Search users..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    icon={<Search size={14} />}
+                  />
+                </div>
               </div>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
                 {filteredUsers.length > 0 ? (
