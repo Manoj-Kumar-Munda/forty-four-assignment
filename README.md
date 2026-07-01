@@ -1,18 +1,47 @@
-# React + Vite
+# forty-four-assignment
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A user management dashboard built with React. Fetches users from a public API, lets you browse, search, and add new ones through a form.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Getting started
 
-## React Compiler
+Make sure you have **Node.js 18+** installed, then run:
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+```bash
+npm install
+npm run dev
+```
 
-Note: This will impact Vite dev & build performances.
+The app will be available at `http://localhost:5173`.
 
-## Expanding the Oxlint configuration
+## Tech stack
+- **Vite** - for building and dev server
+- **React-router-dom** - for routing
+- **Tailwind CSS** - for styling components
+- **Redux Toolkit** - for state management
+- **lucide-react** - for icons
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+### Other commands
+
+```bash
+npm run build     # production build → ./dist
+npm run preview   # serve the production build locally
+npm run lint      # run oxlint
+```
+
+---
+
+## Project structure
+
+```
+src/
+├── components/        # Shared UI components (Button, Input)
+├── constants/         # API endpoint constants
+├── hooks/             # Custom hooks (useFetch)
+├── lib/               # Utility functions (cn helper)
+├── pages/
+│   ├── dashboard/     # User list, search, add-user form
+│   └── user-details/  # Individual user detail view
+└── store/             # Redux store and slices
+```
+
