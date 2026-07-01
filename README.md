@@ -45,3 +45,9 @@ src/
 └── store/             # Redux store and slices
 ```
 
+## Screenshots
+
+<img width="942" height="401" alt="Screenshot 2026-07-01 110117" src="https://github.com/user-attachments/assets/269acca8-2c01-42e3-abb2-6a95b671d7bb" />
+<img width="941" height="409" alt="Screenshot 2026-07-01 110055" src="https://github.com/user-attachments/assets/f810428d-077e-4659-a389-f05a08a28c5a" />
+<img width="925" height="384" alt="Screenshot 2026-07-01 105953" src="https://github.com/user-attachments/assets/efd37ddf-2fda-462d-80ce-2f788f2a9377" />
+
