@@ -24,16 +24,16 @@ const DashboardPage = () => {
   return (
     <div className="min-h-svh py-8 px-6 mx-auto max-w-7xl bg-slate-50 text-neutral-900">
       <header className="mb-10">
-        <h1 className="text-3xl font-bold tracking-tight text-neutral-900">Dashboard</h1>
-        <p className="mt-1.5 text-sm text-neutral-500">Welcome to your dashboard</p>
+        <h1 className="text-3xl font-bold tracking-tight text-heading">Dashboard</h1>
+        <p className="mt-1.5 text-sm text-subheading">Welcome to your dashboard</p>
       </header>
 
-      {loading && !users && <p className="text-sm text-neutral-400">Loading...</p>}
+      {loading && !users && <p className="text-sm text-muted">Loading...</p>}
 
       {error && (
         <div className="flex flex-col items-center justify-center text-center gap-3">
-          <h2 className="text-base font-semibold text-neutral-900">Something went wrong</h2>
-          <p className="text-sm text-neutral-500">{error.message}</p>
+          <h2 className="text-base font-semibold text-heading">Something went wrong</h2>
+          <p className="text-sm text-muted">{error.message}</p>
         </div>
       )}
 
@@ -70,10 +70,10 @@ const DashboardPage = () => {
           )}
         >
           <div className="flex items-center justify-between px-6 py-5 border-b border-neutral-200">
-            <h2 className="text-lg font-semibold text-neutral-900">Add User</h2>
+            <h2 className="text-lg font-semibold text-heading">Add User</h2>
             <Button
               onClick={() => setShowAddUserForm(false)}
-              className="text-neutral-400 hover:text-neutral-700 text-2xl leading-none"
+              className="text-muted hover:text-heading text-2xl leading-none"
             >
               &times;
             </Button>

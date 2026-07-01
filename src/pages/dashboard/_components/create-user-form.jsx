@@ -3,6 +3,7 @@ import { addUser } from "../../../store/slice/users";
 import { cn } from "../../../lib/utils";
 import { useState } from "react";
 import Button from "../../../components/button";
+import Input from "../../../components/Input";
 
 
 const CreateUserForm = () => {
@@ -32,22 +33,10 @@ const CreateUserForm = () => {
     return (
         <form onSubmit={handleSubmit}>
             <div className="flex flex-col gap-4">
-                <div className="flex flex-col gap-2">
-                    <label htmlFor="name" className="text-sm text-gray-500">Name</label>
-                    <input type="text" id="name" name="name" className="border border-neutral-200 rounded-lg px-3 py-1.5 focus:outline-none focus:ring-2 focus:ring-blue-600" />
-                </div>
-                <div className="flex flex-col gap-2">
-                    <label htmlFor="email" className="text-sm text-gray-500">Email</label>
-                    <input type="email" id="email" name="email" className="border border-neutral-200 rounded-lg px-3 py-1.5 focus:outline-none focus:ring-2 focus:ring-blue-600" />
-                </div>
-                <div className="flex flex-col gap-2">
-                    <label htmlFor="phone" className="text-sm text-gray-500">Phone</label>
-                    <input type="text" id="phone" name="phone" className="border border-neutral-200 rounded-lg px-3 py-1.5 focus:outline-none focus:ring-2 focus:ring-blue-600" />
-                </div>
-                <div className="flex flex-col gap-2">
-                    <label htmlFor="company" className="text-sm text-gray-500">Company</label>
-                    <input type="text" id="company" name="company" className="border border-neutral-200 rounded-lg px-3 py-1.5 focus:outline-none focus:ring-2 focus:ring-blue-600" />
-                </div>
+                <Input label="Name" id="name" name="name" type="text" />
+                <Input label="Email" id="email" name="email" type="email" />
+                <Input label="Phone" id="phone" name="phone" type="text" />
+                <Input label="Company" id="company" name="company" type="text" />
             </div>
 
             <Button

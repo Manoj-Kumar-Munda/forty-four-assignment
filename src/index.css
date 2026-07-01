@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+@theme {
+  --color-heading: var(--color-neutral-900);
+  --color-subheading: var(--color-neutral-700);
+  --color-label: var(--color-neutral-700);
+  --color-body: var(--color-neutral-600);
+  --color-muted: var(--color-neutral-400);
+}
