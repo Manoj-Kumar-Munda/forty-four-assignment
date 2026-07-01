@@ -2,6 +2,7 @@ import { useDispatch } from "react-redux";
 import { addUser } from "../../../store/slice/users";
 import { cn } from "../../../lib/utils";
 import { useState } from "react";
+import Button from "../../../components/button";
 
 
 const CreateUserForm = () => {
@@ -49,16 +50,16 @@ const CreateUserForm = () => {
                 </div>
             </div>
 
-            <button
+            <Button
                 type="submit"
                 disabled={isSubmitting}
                 className={cn(
-                    "w-full text-white px-4 py-2 rounded-lg cursor-pointer transition-colors mt-6",
+                    "w-full py-2 mt-6",
                     isSubmitting ? "bg-blue-400" : "bg-blue-600 hover:bg-blue-700"
                 )}
             >
                 {isSubmitting ? "Submitting..." : "Submit"}
-            </button>
+            </Button>
         </form>
     );
 };

@@ -5,6 +5,7 @@ import { setUsers } from "../../store/slice/users";
 import { USERS_API_URL } from "../../constants/endpoints";
 import UserCard from "./_components/user-card";
 import { cn } from "../../lib/utils";
+import Button from "../../components/button";
 import CreateUserForm from "./_components/create-user-form";
 
 
@@ -40,12 +41,12 @@ const DashboardPage = () => {
         <>
           <div className="space-y-4">
             <div className="flex justify-end">
-              <button
-                className="bg-blue-600 text-white px-4 py-1.5 rounded-lg cursor-pointer hover:bg-blue-700 transition-colors"
+              <Button
+                className="bg-blue-600 hover:bg-blue-700"
                 onClick={() => setShowAddUserForm(true)}
               >
                 Add user
-              </button>
+              </Button>
             </div>
             <div className="grid grid-cols-[repeat(auto-fit,minmax(340px,1fr))] gap-5">
               {users.map((user) => (
@@ -70,12 +71,12 @@ const DashboardPage = () => {
         >
           <div className="flex items-center justify-between px-6 py-5 border-b border-neutral-200">
             <h2 className="text-lg font-semibold text-neutral-900">Add User</h2>
-            <button
+            <Button
               onClick={() => setShowAddUserForm(false)}
-              className="text-neutral-400 hover:text-neutral-700 transition-colors cursor-pointer text-2xl leading-none"
+              className="text-neutral-400 hover:text-neutral-700 text-2xl leading-none"
             >
               &times;
-            </button>
+            </Button>
           </div>
 
           <div className="px-6 py-6">
